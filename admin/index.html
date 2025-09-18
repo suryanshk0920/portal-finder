@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Finder - Admin Analytics Dashboard</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.29.3/index.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-spinner">
+            <i class="fas fa-chart-line"></i>
+            <p>Loading Analytics Dashboard...</p>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Container -->
+    <div id="dashboardContainer" class="dashboard-container hidden">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fas fa-chart-pie"></i>
+                    <h1>Portal Finder Analytics</h1>
+                </div>
+                <div class="system-status">
+                    <span id="systemStatus" class="status-indicator loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span>Connecting...</span>
+                    </span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="refresh-controls">
+                    <button id="refreshBtn" class="refresh-btn">
+                        <i class="fas fa-sync"></i>
+                        Refresh
+                    </button>
+                    <div class="auto-refresh">
+                        <label>
+                            <input type="checkbox" id="autoRefresh" checked>
+                            Auto-refresh (30s)
+                        </label>
+                    </div>
+                </div>
+                <div class="last-updated">
+                    Last updated: <span id="lastUpdated">--</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Quick Stats Overview -->
+        <section class="overview-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value" id="totalRequests">--</div>
+                    <div class="stat-label">Total Requests</div>
+                    <div class="stat-change" id="requestsChange">--</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon success">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value" id="cacheHitRate">--%</div>
+                    <div class="stat-label">Cache Hit Rate</div>
+                    <div class="stat-change" id="hitRateChange">--</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon warning">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value" id="avgResponseTime">-- ms</div>
+                    <div class="stat-label">Avg Response Time</div>
+                    <div class="stat-change" id="responseTimeChange">--</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon info">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value" id="apiCallsSaved">--</div>
+                    <div class="stat-label">API Calls Saved</div>
+                    <div class="stat-change" id="costSavings">--</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <main class="dashboard-grid">
+            <!-- Cache Performance Chart -->
+            <section class="dashboard-card chart-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-chart-line"></i> Cache Performance Trends</h3>
+                    <div class="card-controls">
+                        <select id="performanceTimeRange">
+                            <option value="1">Last 24 Hours</option>
+                            <option value="7" selected>Last 7 Days</option>
+                            <option value="30">Last 30 Days</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </section>
+
+            <!-- API Usage Chart -->
+            <section class="dashboard-card chart-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-chart-bar"></i> API Usage & Cache Distribution</h3>
+                    <div class="card-controls">
+                        <button id="toggleChartType" class="toggle-btn">
+                            <i class="fas fa-exchange-alt"></i> Toggle View
+                        </button>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="usageChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Popular Queries Table -->
+            <section class="dashboard-card table-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-fire"></i> Popular Search Queries</h3>
+                    <div class="card-controls">
+                        <select id="popularQueriesLimit">
+                            <option value="10">Top 10</option>
+                            <option value="20" selected>Top 20</option>
+                            <option value="50">Top 50</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="popularQueriesTable">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Query</th>
+                                <th>Search Count</th>
+                                <th>Avg Results</th>
+                                <th>States</th>
+                                <th>Last Searched</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="6" class="loading-row">
+                                    <i class="fas fa-spinner fa-spin"></i> Loading popular queries...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- System Health Monitor -->
+            <section class="dashboard-card health-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-heartbeat"></i> System Health</h3>
+                    <div class="health-status" id="overallHealth">
+                        <span class="health-indicator unknown">
+                            <i class="fas fa-question"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="health-metrics">
+                    <div class="health-item">
+                        <div class="health-label">Cache Service</div>
+                        <div class="health-value" id="cacheServiceHealth">
+                            <i class="fas fa-spinner fa-spin"></i> Checking...
+                        </div>
+                    </div>
+                    <div class="health-item">
+                        <div class="health-label">Memory Cache</div>
+                        <div class="health-value" id="memoryCacheHealth">
+                            <i class="fas fa-spinner fa-spin"></i> Checking...
+                        </div>
+                    </div>
+                    <div class="health-item">
+                        <div class="health-label">Database</div>
+                        <div class="health-value" id="databaseHealth">
+                            <i class="fas fa-spinner fa-spin"></i> Checking...
+                        </div>
+                    </div>
+                    <div class="health-item">
+                        <div class="health-label">API Service</div>
+                        <div class="health-value" id="apiServiceHealth">
+                            <i class="fas fa-spinner fa-spin"></i> Checking...
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cache Statistics Details -->
+            <section class="dashboard-card stats-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-database"></i> Detailed Cache Statistics</h3>
+                    <div class="card-controls">
+                        <button id="exportStatsBtn" class="export-btn">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon-small">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                        <div class="stat-details">
+                            <div class="stat-number" id="memoryCacheSize">--</div>
+                            <div class="stat-desc">Memory Cache Entries</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon-small">
+                            <i class="fas fa-hdd"></i>
+                        </div>
+                        <div class="stat-details">
+                            <div class="stat-number" id="dbCacheSize">--</div>
+                            <div class="stat-desc">Database Cache Entries</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon-small">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-details">
+                            <div class="stat-number" id="cacheAge">--</div>
+                            <div class="stat-desc">Oldest Cache Entry</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon-small">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                        <div class="stat-details">
+                            <div class="stat-number" id="expiredEntries">--</div>
+                            <div class="stat-desc">Expired Entries Cleaned</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity Log -->
+            <section class="dashboard-card log-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-list-alt"></i> Recent Activity</h3>
+                    <div class="card-controls">
+                        <button id="clearLogBtn" class="clear-btn">
+                            <i class="fas fa-broom"></i> Clear
+                        </button>
+                    </div>
+                </div>
+                <div class="activity-log" id="activityLog">
+                    <div class="log-item">
+                        <div class="log-time">Loading...</div>
+                        <div class="log-message">Initializing activity monitor...</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2024 Portal Finder Analytics Dashboard</p>
+                </div>
+                <div class="footer-right">
+                    <button id="cacheManagementBtn" class="management-btn">
+                        <i class="fas fa-cogs"></i> Cache Management
+                    </button>
+                    <button id="systemInfoBtn" class="info-btn">
+                        <i class="fas fa-info-circle"></i> System Info
+                    </button>
+                    <button id="logoutBtn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Cache Management Modal -->
+    <div id="cacheManagementModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-cogs"></i> Cache Management</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="management-actions">
+                    <div class="action-group">
+                        <h4>Cache Operations</h4>
+                        <button id="clearExpiredBtn" class="action-btn warning">
+                            <i class="fas fa-clock"></i> Clear Expired Entries
+                        </button>
+                        <button id="warmCacheBtn" class="action-btn success">
+                            <i class="fas fa-fire"></i> Warm Cache
+                        </button>
+                        <button id="clearAllCacheBtn" class="action-btn danger">
+                            <i class="fas fa-trash"></i> Clear All Cache
+                        </button>
+                    </div>
+                    <div class="action-group">
+                        <h4>Testing</h4>
+                        <button id="testCacheBtn" class="action-btn info">
+                            <i class="fas fa-vial"></i> Test Cache System
+                        </button>
+                    </div>
+                </div>
+                <div id="managementResults" class="management-results hidden">
+                    <h4>Operation Results</h4>
+                    <div id="resultsContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Info Modal -->
+    <div id="systemInfoModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-info-circle"></i> System Information</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="system-info">
+                    <div class="info-section">
+                        <h4>Cache Configuration</h4>
+                        <div id="cacheConfig" class="info-content">Loading...</div>
+                    </div>
+                    <div class="info-section">
+                        <h4>Performance Metrics</h4>
+                        <div id="performanceMetrics" class="info-content">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-auth.js"></script>
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,1140 @@
+{
+  "central_government": {
+    "identity_documents": {
+      "passport": {
+        "name": "Passport Seva Portal",
+        "url": "https://www.passportindia.gov.in",
+        "description": "Official portal for passport applications, renewals, and tracking. Apply online for fresh passports, renewals, and police clearance certificates.",
+        "services": ["passport application", "passport renewal", "passport status", "police clearance certificate"]
+      },
+      "aadhaar": {
+        "name": "UIDAI - Aadhaar Portal",
+        "url": "https://uidai.gov.in",
+        "description": "Official Aadhaar portal for enrollment, updates, downloads, and verification. Get your Aadhaar card, update demographics, and download e-Aadhaar.",
+        "services": ["aadhaar card", "aadhaar enrollment", "aadhaar update", "aadhaar download", "aadhaar verification"]
+      },
+      "pan_card": {
+        "name": "Income Tax Department - PAN Services",
+        "url": "https://www.incometax.gov.in/iec/foportal",
+        "description": "Official portal for PAN card applications, corrections, and linking services. Apply for new PAN, make corrections, and link with Aadhaar.",
+        "services": ["pan card", "pan application", "pan correction", "pan aadhaar linking"]
+      },
+      "voter_id": {
+        "name": "National Voters' Service Portal",
+        "url": "https://www.nvsp.in",
+        "description": "Official portal for voter registration, voter ID card services, and electoral roll searches. Register as voter, apply for voter ID, and check electoral roll.",
+        "services": ["voter id", "voter registration", "voter card", "electoral roll", "voter verification"]
+      }
+    },
+    "licenses_certificates": {
+      "driving_license": {
+        "name": "Parivahan Sewa Portal",
+        "url": "https://parivahan.gov.in/parivahan",
+        "description": "Official portal for driving license services, vehicle registration, and transport-related services. Apply for DL, renew license, and book slots.",
+        "services": ["driving license", "dl renewal", "vehicle registration", "rc transfer", "learner license"]
+      },
+      "digital_certificates": {
+        "name": "Controller of Certifying Authorities",
+        "url": "https://cca.gov.in",
+        "description": "Official portal for digital signature certificates and PKI services. Apply for digital certificates for secure online transactions.",
+        "services": ["digital signature", "digital certificate", "dsc", "class 3 certificate"]
+      }
+    },
+    "employment_business": {
+      "epf": {
+        "name": "EPFO Portal",
+        "url": "https://www.epfindia.gov.in",
+        "description": "Official portal for Employees' Provident Fund services. Check EPF balance, withdraw PF, transfer PF, and download UAN card.",
+        "services": ["epf", "provident fund", "pf balance", "pf withdrawal", "uan", "pf transfer"]
+      },
+      "esi": {
+        "name": "ESI Corporation Portal",
+        "url": "https://www.esic.gov.in",
+        "description": "Official portal for Employee State Insurance services. Register for ESI, check benefits, and access medical facilities.",
+        "services": ["esi", "employee insurance", "medical benefits", "esi card"]
+      },
+      "msme": {
+        "name": "MSME Registration Portal",
+        "url": "https://udyamregistration.gov.in",
+        "description": "Official portal for MSME/Udyam registration. Register your micro, small, and medium enterprises online.",
+        "services": ["msme registration", "udyam registration", "small business registration"]
+      }
+    },
+    "tax_services": {
+      "income_tax": {
+        "name": "Income Tax e-Filing Portal",
+        "url": "https://www.incometax.gov.in",
+        "description": "Official portal for income tax filing, refund status, and tax-related services. File ITR, check refund status, and pay taxes online.",
+        "services": ["income tax", "itr filing", "tax refund", "tax payment", "form 16", "tax calculation"]
+      },
+      "gst": {
+        "name": "GST Portal",
+        "url": "https://www.gst.gov.in",
+        "description": "Official portal for GST registration, returns filing, and compliance. Register for GST, file returns, and make GST payments.",
+        "services": ["gst registration", "gst return", "gst payment", "input tax credit", "gst compliance"]
+      }
+    },
+    "utilities_infrastructure": {
+      "electricity": {
+        "name": "National Power Portal",
+        "url": "https://powermin.gov.in",
+        "description": "Information about electricity services, power connections, and utility bills. Contact state electricity boards for bill payments and new connections.",
+        "services": ["electricity bill", "power connection", "electricity complaint", "power supply", "electric meter", "electricity subsidy", "power cut", "electricity board"]
+      },
+      "gas_lpg": {
+        "name": "Pradhan Mantri Ujjwala Yojana",
+        "url": "https://www.pmuy.gov.in",
+        "description": "LPG connections and subsidies under PMUY scheme. Apply for gas connections and check subsidy status.",
+        "services": ["gas connection", "lpg", "cylinder booking", "gas subsidy", "ujjwala yojana", "cooking gas"]
+      },
+      "water_supply": {
+        "name": "Jal Jeevan Mission Portal",
+        "url": "https://jaljeevanmission.gov.in",
+        "description": "Tap water connections and water supply schemes. Check connection status and water quality information.",
+        "services": ["water connection", "water bill", "water supply", "tap connection", "water quality", "jal jeevan mission"]
+      },
+      "telecom": {
+        "name": "Department of Telecommunications",
+        "url": "https://dot.gov.in",
+        "description": "Telecom services, mobile connections, and communication infrastructure. Register complaints and check policies.",
+        "services": ["mobile connection", "telecom complaint", "phone connection", "internet connection", "broadband"]
+      }
+    },
+    "welfare_schemes": {
+      "pm_kisan": {
+        "name": "PM-KISAN Portal",
+        "url": "https://pmkisan.gov.in",
+        "description": "Official portal for PM-KISAN scheme benefits. Check beneficiary status, update bank details, and track payments.",
+        "services": ["pm kisan", "farmer subsidy", "kisan samman nidhi", "farmer benefits", "agricultural support"]
+      },
+      "ayushman_bharat": {
+        "name": "Ayushman Bharat Portal",
+        "url": "https://pmjay.gov.in",
+        "description": "Official portal for Ayushman Bharat health insurance scheme. Check eligibility, find hospitals, and access health benefits.",
+        "services": ["ayushman bharat", "health insurance", "pmjay", "health card", "medical treatment", "hospital treatment"]
+      },
+      "ration_card": {
+        "name": "National Food Security Portal",
+        "url": "https://nfsa.gov.in",
+        "description": "Ration card services and food security schemes. Apply for ration cards and check beneficiary status.",
+        "services": ["ration card", "food security", "pds", "public distribution", "subsidized food", "food grain"]
+      },
+      "pension": {
+        "name": "National Social Assistance Programme",
+        "url": "https://nsap.nic.in",
+        "description": "Old age pension, widow pension, and disability pension schemes. Check pension status and apply.",
+        "services": ["old age pension", "widow pension", "disability pension", "social security", "pension scheme"]
+      }
+    },
+    "property_housing": {
+      "property_registration": {
+        "name": "National Generic Document Registration System",
+        "url": "https://ngdrs.gov.in",
+        "description": "Property registration, document verification, and land records. Register property documents online.",
+        "services": ["property registration", "land records", "property documents", "registry", "mutation", "property verification"]
+      },
+      "housing_schemes": {
+        "name": "PM Awas Yojana Portal",
+        "url": "https://pmaymis.gov.in",
+        "description": "Housing schemes and home loans under PM Awas Yojana. Apply for housing benefits and check status.",
+        "services": ["housing scheme", "pm awas yojana", "home loan", "housing subsidy", "affordable housing"]
+      }
+    },
+    "banking_finance": {
+      "banking": {
+        "name": "Jan Dhan Yojana Portal",
+        "url": "https://www.pmjdy.gov.in",
+        "description": "Bank account opening under Jan Dhan scheme. Financial inclusion and banking services.",
+        "services": ["bank account", "jan dhan yojana", "savings account", "financial inclusion", "banking"]
+      },
+      "insurance": {
+        "name": "Insurance Regulatory Portal",
+        "url": "https://www.irdai.gov.in",
+        "description": "Insurance policies, complaints, and regulatory information. Check insurance company details.",
+        "services": ["insurance", "life insurance", "health insurance", "insurance complaint", "policy"]
+      }
+    },
+    "agriculture": {
+      "crop_insurance": {
+        "name": "Pradhan Mantri Fasal Bima Yojana",
+        "url": "https://pmfby.gov.in",
+        "description": "Crop insurance schemes for farmers. Apply for insurance and check claim status.",
+        "services": ["crop insurance", "fasal bima", "agricultural insurance", "farmer insurance", "crop compensation"]
+      },
+      "soil_health": {
+        "name": "Soil Health Card Portal",
+        "url": "https://soilhealth.dac.gov.in",
+        "description": "Soil testing and health cards for farmers. Get soil analysis and recommendations.",
+        "services": ["soil health card", "soil testing", "agricultural advice", "farming guidance"]
+      }
+    },
+    "education": {
+      "scholarship": {
+        "name": "National Scholarship Portal",
+        "url": "https://scholarships.gov.in",
+        "description": "Official portal for various government scholarships. Apply for pre-matric, post-matric, and merit scholarships.",
+        "services": ["scholarship", "student aid", "education loan", "merit scholarship", "minority scholarship"]
+      }
+    },
+    "grievance": {
+      "cpgrams": {
+        "name": "CPGRAMS - Central Public Grievance Portal",
+        "url": "https://pgportal.gov.in",
+        "description": "Official portal for lodging grievances against central government departments. Submit complaints and track status.",
+        "services": ["grievance", "complaint", "public grievance", "government complaint"]
+      }
+    }
+  },
+  "common_portals": {
+    "digilocker": {
+      "name": "DigiLocker",
+      "url": "https://digilocker.gov.in",
+      "description": "Official digital locker for storing and accessing government documents. Store driving license, PAN, Aadhaar, and other certificates digitally.",
+      "services": ["document storage", "digital documents", "certificate verification", "digital locker"]
+    },
+    "umang": {
+      "name": "UMANG App Portal",
+      "url": "https://web.umang.gov.in",
+      "description": "Unified Mobile Application for New-age Governance. Access multiple government services through single portal.",
+      "services": ["government app", "multiple services", "mobile governance", "digital services"]
+    },
+    "india_gov": {
+      "name": "India.gov.in - National Portal",
+      "url": "https://www.india.gov.in",
+      "description": "National portal of India providing information about government services, schemes, and departments.",
+      "services": ["government information", "schemes", "department contacts", "general information"]
+    },
+    "mygov": {
+      "name": "MyGov Portal",
+      "url": "https://www.mygov.in",
+      "description": "Citizen engagement platform for participating in governance, discussions, and policy making.",
+      "services": ["citizen participation", "policy discussion", "government interaction", "feedback"]
+    }
+  },
+  "state_specific": {
+    "delhi": {
+      "main_portal": {
+        "name": "Delhi e-District Portal",
+        "url": "https://edistrict.delhigovt.nic.in",
+        "description": "Official portal for Delhi government services including certificates, licenses, and welfare schemes.",
+        "services": ["delhi ration card", "delhi birth certificate", "delhi income certificate", "delhi services"]
+      },
+      "electricity": {
+        "name": "Delhi Electricity Board Portal",
+        "url": "https://www.bsesdelhi.com",
+        "description": "Delhi electricity services, bill payments, and power connections.",
+        "services": ["delhi electricity bill", "delhi power connection", "delhi electricity complaint"]
+      }
+    },
+    "uttar_pradesh": {
+      "main_portal": {
+        "name": "UP e-Sathi Portal",
+        "url": "https://esathi.up.gov.in",
+        "description": "Official portal for Uttar Pradesh government services and citizen services.",
+        "services": ["up ration card", "up certificate", "uttar pradesh services"]
+      },
+      "electricity": {
+        "name": "UP Power Corporation",
+        "url": "https://www.upenergy.in",
+        "description": "Uttar Pradesh electricity services, bill payments, and power connections.",
+        "services": ["up electricity bill", "uttar pradesh electricity", "up power"]
+      }
+    },
+    "maharashtra": {
+      "main_portal": {
+        "name": "Maharashtra Online Services",
+        "url": "https://aaplesarkar.mahaonline.gov.in",
+        "description": "Official portal for Maharashtra government services including certificates, licenses, and welfare schemes.",
+        "services": ["maharashtra ration card", "maharashtra certificate", "maharashtra services"]
+      },
+      "electricity": {
+        "name": "MSEB - Maharashtra Electricity Board",
+        "url": "https://www.mahadiscom.in",
+        "description": "Maharashtra electricity services, bill payments, and new connections.",
+        "services": ["maharashtra electricity bill", "mseb", "maharashtra power"]
+      }
+    },
+    "karnataka": {
+      "main_portal": {
+        "name": "Karnataka One Portal",
+        "url": "https://www.karnatakaone.gov.in",
+        "description": "Official portal for Karnataka government services and citizen services.",
+        "services": ["karnataka ration card", "karnataka certificate", "karnataka services"]
+      },
+      "electricity": {
+        "name": "BESCOM - Bangalore Electricity",
+        "url": "https://bescom.karnataka.gov.in",
+        "description": "Karnataka electricity services, BESCOM bill payments, and power connections.",
+        "services": ["karnataka electricity bill", "bescom", "karnataka power"]
+      }
+    },
+    "tamil_nadu": {
+      "main_portal": {
+        "name": "Tamil Nadu e-Services Portal",
+        "url": "https://www.tnpublicservices.gov.in",
+        "description": "Official portal for Tamil Nadu government services and public service delivery.",
+        "services": ["tamil nadu ration card", "tamil nadu certificate", "tn services"]
+      },
+      "electricity": {
+        "name": "TNEB - Tamil Nadu Electricity Board",
+        "url": "https://www.tnebnet.org",
+        "description": "Tamil Nadu electricity services, TNEB bill payments, and power connections.",
+        "services": ["tamil nadu electricity bill", "tneb", "tamil nadu power"]
+      }
+    },
+    "gujarat": {
+      "main_portal": {
+        "name": "Digital Gujarat Portal",
+        "url": "https://www.digitalgujarat.gov.in",
+        "description": "Official portal for Gujarat government services and digital initiatives.",
+        "services": ["gujarat ration card", "gujarat certificate", "gujarat services"]
+      },
+      "electricity": {
+        "name": "Gujarat Electricity Board",
+        "url": "https://www.geb.gov.in",
+        "description": "Gujarat electricity services, bill payments, and power connections.",
+        "services": ["gujarat electricity bill", "gujarat power", "geb"]
+      }
+    },
+    "rajasthan": {
+      "main_portal": {
+        "name": "Rajasthan Single Sign-On",
+        "url": "https://sso.rajasthan.gov.in",
+        "description": "Official portal for Rajasthan government services and SSO platform.",
+        "services": ["rajasthan ration card", "rajasthan certificate", "rajasthan sso"]
+      },
+      "electricity": {
+        "name": "Rajasthan Electricity Board",
+        "url": "https://energy.rajasthan.gov.in",
+        "description": "Rajasthan electricity services, bill payments, and power connections.",
+        "services": ["rajasthan electricity bill", "rajasthan power", "rseb"]
+      }
+    },
+    "west_bengal": {
+      "main_portal": {
+        "name": "West Bengal e-District Portal",
+        "url": "https://wb.gov.in",
+        "description": "Official portal for West Bengal government services and certificates.",
+        "services": ["west bengal ration card", "wb certificate", "west bengal services"]
+      },
+      "electricity": {
+        "name": "WBSEDCL - West Bengal Electricity",
+        "url": "https://www.wbsedcl.in",
+        "description": "West Bengal electricity services, bill payments, and power connections.",
+        "services": ["west bengal electricity bill", "wb electricity", "wbsedcl"]
+      }
+    },
+    "punjab": {
+      "main_portal": {
+        "name": "Punjab Government Portal",
+        "url": "https://punjab.gov.in",
+        "description": "Official portal for Punjab government services and information.",
+        "services": ["punjab ration card", "punjab certificate", "punjab services"]
+      },
+      "electricity": {
+        "name": "Punjab State Power Corporation",
+        "url": "https://www.pspcl.in",
+        "description": "Punjab electricity services, PSPCL bill payments, and power connections.",
+        "services": ["punjab electricity bill", "punjab power", "pspcl"]
+      }
+    },
+    "haryana": {
+      "main_portal": {
+        "name": "Saral Haryana Portal",
+        "url": "https://saralharyana.gov.in",
+        "description": "Official portal for Haryana government services and citizen services.",
+        "services": ["haryana ration card", "haryana certificate", "saral haryana"]
+      },
+      "electricity": {
+        "name": "Haryana Electricity Board",
+        "url": "https://www.haryanaelectricity.gov.in",
+        "description": "Haryana electricity services, bill payments, and power connections.",
+        "services": ["haryana electricity bill", "haryana power", "uhbvn", "dhbvn"]
+      }
+    },
+    "uttarakhand": {
+      "main_portal": {
+        "name": "Uttarakhand eDistrict Portal",
+        "url": "https://edistrict.uk.gov.in",
+        "description": "Official portal for Uttarakhand government services and citizen services.",
+        "services": ["uttarakhand ration card", "uttarakhand certificate", "uttarakhand services"]
+      }
+    },
+    "andhra_pradesh": {
+      "main_portal": {
+        "name": "AP Online Portal",
+        "url": "https://www.aponline.gov.in",
+        "description": "Official portal for Andhra Pradesh government services and online applications.",
+        "services": ["andhra pradesh ration card", "ap certificate", "ap services"]
+      },
+      "electricity": {
+        "name": "AP Electricity Board",
+        "url": "https://www.apspdcl.in",
+        "description": "Andhra Pradesh electricity services, bill payments, and power connections.",
+        "services": ["andhra pradesh electricity bill", "ap electricity", "apspdcl"]
+      }
+    },
+    "telangana": {
+      "main_portal": {
+        "name": "TS Online Portal",
+        "url": "https://www.tsonline.gov.in",
+        "description": "Official portal for Telangana government services and online applications.",
+        "services": ["telangana ration card", "ts certificate", "telangana services"]
+      },
+      "electricity": {
+        "name": "TS Electricity Board",
+        "url": "https://www.tssouthernpower.com",
+        "description": "Telangana electricity services, bill payments, and power connections.",
+        "services": ["telangana electricity bill", "ts electricity", "tsspdcl"]
+      }
+    },
+    "bihar": {
+      "main_portal": {
+        "name": "Bihar Government Portal",
+        "url": "https://state.bihar.gov.in",
+        "description": "Official portal for Bihar government services and information.",
+        "services": ["bihar ration card", "bihar certificate", "bihar services"]
+      },
+      "electricity": {
+        "name": "Bihar State Power Board",
+        "url": "https://www.bsphcl.co.in",
+        "description": "Bihar electricity services, bill payments, and power connections.",
+        "services": ["bihar electricity bill", "bihar power", "electricity bill", "power connection", "bsphcl"]
+      }
+    },
+    "madhya_pradesh": {
+      "main_portal": {
+        "name": "MP Online Portal",
+        "url": "https://www.mponline.gov.in",
+        "description": "Official portal for Madhya Pradesh government services and online applications.",
+        "services": ["mp ration card", "madhya pradesh certificate", "mp services"]
+      },
+      "electricity": {
+        "name": "MP Power Management Company Limited",
+        "url": "https://www.mpez.co.in",
+        "description": "Madhya Pradesh electricity services, bill payments, and power connections.",
+        "services": ["mp electricity bill", "madhya pradesh power", "electricity bill", "power connection", "mpez"]
+      }
+    },
+    "odisha": {
+      "main_portal": {
+        "name": "Odisha Government Portal",
+        "url": "https://odisha.gov.in",
+        "description": "Official portal for Odisha government services and information.",
+        "services": ["odisha ration card", "odisha certificate", "odisha services"]
+      },
+      "electricity": {
+        "name": "OHPC & OPDCL - Odisha Power",
+        "url": "https://www.ohpc.co.in",
+        "description": "Odisha electricity services, bill payments, and power connections.",
+        "services": ["odisha electricity bill", "odisha power", "electricity bill", "power connection", "ohpc", "opdcl"]
+      }
+    },
+    "jharkhand": {
+      "main_portal": {
+        "name": "Jharkhand Government Portal",
+        "url": "https://jharkhand.gov.in",
+        "description": "Official portal for Jharkhand government services and information.",
+        "services": ["jharkhand ration card", "jharkhand certificate", "jharkhand services"]
+      },
+      "electricity": {
+        "name": "Jharkhand State Electricity Board (JSEB)",
+        "url": "https://www.jseb.co.in",
+        "description": "Jharkhand electricity services, JSEB bill payments, and power connections.",
+        "services": ["jharkhand electricity bill", "jseb", "jharkhand power", "electricity bill", "power connection", "electricity complaint"]
+      }
+    },
+    "chhattisgarh": {
+      "main_portal": {
+        "name": "Chhattisgarh Government Portal",
+        "url": "https://cgstate.gov.in",
+        "description": "Official portal for Chhattisgarh government services and information.",
+        "services": ["chhattisgarh ration card", "chhattisgarh certificate", "cg services"]
+      }
+    },
+    "assam": {
+      "main_portal": {
+        "name": "Assam Government Portal",
+        "url": "https://assam.gov.in",
+        "description": "Official portal for Assam government services and information.",
+        "services": ["assam ration card", "assam certificate", "assam services"]
+      }
+    },
+    "himachal_pradesh": {
+      "main_portal": {
+        "name": "Himachal Pradesh Government Portal",
+        "url": "https://himachal.nic.in",
+        "description": "Official portal for Himachal Pradesh government services and information.",
+        "services": ["himachal pradesh ration card", "hp certificate", "himachal services"]
+      }
+    },
+    "tripura": {
+      "main_portal": {
+        "name": "Tripura Government Portal",
+        "url": "https://tripura.gov.in",
+        "description": "Official portal for Tripura government services and information.",
+        "services": ["tripura ration card", "tripura certificate", "tripura services"]
+      }
+    },
+    "kerala": {
+      "main_portal": {
+        "name": "Kerala Government Portal",
+        "url": "https://kerala.gov.in",
+        "description": "Official portal for Kerala government services and information.",
+        "services": ["kerala ration card", "kerala certificate", "kerala services"]
+      }
+    }
+  },
+  "detailed_state_services": {
+    "delhi": {
+      "ration_card": {
+        "name": "Delhi e-District Portal",
+        "url": "https://edistrict.delhigovt.nic.in",
+        "description": "Services for ration card, caste, income, domicile and other certificates.",
+        "services": ["delhi ration card", "ration card application", "food security"]
+      },
+      "caste_certificate": {
+        "name": "Delhi e-District - Caste Certificate",
+        "url": "https://edistrict.delhigovt.nic.in",
+        "description": "Apply and download caste certificate online in Delhi.",
+        "services": ["caste certificate", "sc certificate", "st certificate", "obc certificate"]
+      },
+      "income_certificate": {
+        "name": "Delhi e-District - Income Certificate",
+        "url": "https://edistrict.delhigovt.nic.in",
+        "description": "Portal for issuing income certificate in Delhi.",
+        "services": ["income certificate", "income proof", "salary certificate"]
+      },
+      "driving_license": {
+        "name": "Parivahan Sewa (MoRTH)",
+        "url": "https://parivahan.gov.in",
+        "description": "Apply for new driving license, renewal, and vehicle registration.",
+        "services": ["driving license", "dl renewal", "learner license", "vehicle registration"]
+      },
+      "land_records": {
+        "name": "Delhi Land Records Portal",
+        "url": "https://dlrc.delhigovt.nic.in",
+        "description": "Access and verify land and property records in Delhi.",
+        "services": ["land records", "property records", "mutation", "property verification"]
+      },
+      "birth_certificate": {
+        "name": "MCD Birth Certificate Portal",
+        "url": "https://mcdonline.nic.in",
+        "description": "Apply and download birth certificates in Delhi.",
+        "services": ["birth certificate", "birth registration", "birth record"]
+      },
+      "death_certificate": {
+        "name": "MCD Death Certificate Portal",
+        "url": "https://mcdonline.nic.in",
+        "description": "Apply and download death certificates in Delhi.",
+        "services": ["death certificate", "death registration", "death record"]
+      },
+      "marriage_certificate": {
+        "name": "Delhi Marriage Registration Portal",
+        "url": "https://edistrict.delhigovt.nic.in",
+        "description": "Register and download marriage certificates in Delhi.",
+        "services": ["marriage certificate", "marriage registration", "marriage record"]
+      },
+      "pension_services": {
+        "name": "Delhi Social Welfare Pension Portal",
+        "url": "https://edistrict.delhigovt.nic.in",
+        "description": "Apply for old age, widow, and disability pensions.",
+        "services": ["old age pension", "widow pension", "disability pension", "social security pension"]
+      },
+      "scholarships": {
+        "name": "National Scholarship Portal",
+        "url": "https://scholarships.gov.in",
+        "description": "Apply for state and central scholarships online.",
+        "services": ["scholarship", "student aid", "education grant", "merit scholarship"]
+      },
+      "employment_services": {
+        "name": "Delhi Employment Exchange",
+        "url": "https://employment.delhi.gov.in",
+        "description": "Portal for job seekers and employment exchange in Delhi.",
+        "services": ["job search", "employment exchange", "job registration", "skill development"]
+      },
+      "property_registration": {
+        "name": "Delhi Online Property Registration",
+        "url": "https://doris.delhigovt.nic.in",
+        "description": "Property registration and deed verification services in Delhi.",
+        "services": ["property registration", "property deed", "stamp duty", "registration fee"]
+      },
+      "water_services": {
+        "name": "Delhi Jal Board",
+        "url": "https://djbonline.delhi.gov.in",
+        "description": "Online water bill payment and services for Delhi residents.",
+        "services": ["water bill", "water connection", "water complaint", "water supply"]
+      },
+      "health_schemes": {
+        "name": "Delhi Health Services",
+        "url": "https://delhigovt.nic.in",
+        "description": "Government health schemes and e-health card services.",
+        "services": ["health card", "medical scheme", "hospital services", "health insurance"]
+      }
+    },
+    "uttar_pradesh": {
+      "ration_card": {
+        "name": "UP e-Sathi Portal",
+        "url": "https://esathi.up.gov.in",
+        "description": "Official portal for Uttar Pradesh services including ration card and certificates.",
+        "services": ["up ration card", "ration card application", "food security", "pds"]
+      },
+      "caste_certificate": {
+        "name": "UP Caste Certificate Portal",
+        "url": "https://edistrict.up.gov.in",
+        "description": "Apply for caste certificate in Uttar Pradesh.",
+        "services": ["caste certificate", "sc certificate", "st certificate", "obc certificate"]
+      },
+      "income_certificate": {
+        "name": "UP Income Certificate Portal",
+        "url": "https://edistrict.up.gov.in",
+        "description": "Apply for income certificate in Uttar Pradesh.",
+        "services": ["income certificate", "income proof", "salary certificate"]
+      },
+      "driving_license": {
+        "name": "UP Transport - Parivahan Sewa",
+        "url": "https://parivahan.gov.in",
+        "description": "Driving license and vehicle registration in Uttar Pradesh.",
+        "services": ["driving license", "dl renewal", "learner license", "vehicle registration"]
+      },
+      "land_records": {
+        "name": "UP Bhulekh",
+        "url": "http://upbhulekh.gov.in",
+        "description": "Land records and property information for Uttar Pradesh.",
+        "services": ["land records", "khatauni", "khasra", "property records", "mutation"]
+      },
+      "birth_certificate": {
+        "name": "UP Birth Certificate",
+        "url": "https://edistrict.up.gov.in",
+        "description": "Apply and download birth certificate in Uttar Pradesh.",
+        "services": ["birth certificate", "birth registration", "birth record"]
+      },
+      "death_certificate": {
+        "name": "UP Death Certificate",
+        "url": "https://edistrict.up.gov.in",
+        "description": "Apply and download death certificate in Uttar Pradesh.",
+        "services": ["death certificate", "death registration", "death record"]
+      },
+      "marriage_certificate": {
+        "name": "UP Marriage Registration",
+        "url": "https://igrsup.gov.in",
+        "description": "Marriage registration services in Uttar Pradesh.",
+        "services": ["marriage certificate", "marriage registration", "marriage record"]
+      },
+      "pension_services": {
+        "name": "UP Pension Portal",
+        "url": "https://sspy-up.gov.in",
+        "description": "Social security pension services in Uttar Pradesh.",
+        "services": ["old age pension", "widow pension", "disability pension", "social security pension"]
+      },
+      "scholarships": {
+        "name": "UP Scholarship Portal",
+        "url": "https://scholarship.up.gov.in",
+        "description": "Scholarship application and tracking in Uttar Pradesh.",
+        "services": ["scholarship", "student aid", "education grant", "minority scholarship"]
+      },
+      "employment_services": {
+        "name": "UP Sewayojan Portal",
+        "url": "https://sewayojan.up.nic.in",
+        "description": "Employment exchange and job portal in Uttar Pradesh.",
+        "services": ["job search", "employment exchange", "job registration", "skill development"]
+      },
+      "property_registration": {
+        "name": "UP Property Registration",
+        "url": "https://igrsup.gov.in",
+        "description": "Online property registration in Uttar Pradesh.",
+        "services": ["property registration", "property deed", "stamp duty", "registration fee"]
+      },
+      "electricity_services": {
+        "name": "UP Power Corporation Ltd",
+        "url": "https://www.uppclonline.com",
+        "description": "Online electricity bill payment and services.",
+        "services": ["electricity bill", "power connection", "meter reading", "power complaint"]
+      },
+      "water_services": {
+        "name": "UP Jal Nigam",
+        "url": "http://www.upjn.org",
+        "description": "Water supply and bill payment in Uttar Pradesh.",
+        "services": ["water bill", "water connection", "water complaint", "water supply"]
+      },
+      "health_schemes": {
+        "name": "UP Health Department",
+        "url": "https://uphealth.up.nic.in",
+        "description": "Government health schemes and hospital services in UP.",
+        "services": ["health card", "medical scheme", "hospital services", "health insurance"]
+      }
+    },
+    "uttarakhand": {
+      "ration_card": {
+        "name": "Uttarakhand eDistrict Portal",
+        "url": "https://edistrict.uk.gov.in",
+        "description": "Apply for ration card and other citizen services in Uttarakhand.",
+        "services": ["uttarakhand ration card", "ration card application", "food security"]
+      },
+      "caste_certificate": {
+        "name": "Uttarakhand Caste Certificate",
+        "url": "https://edistrict.uk.gov.in",
+        "description": "Application for caste certificate online.",
+        "services": ["caste certificate", "sc certificate", "st certificate", "obc certificate"]
+      },
+      "income_certificate": {
+        "name": "Uttarakhand Income Certificate",
+        "url": "https://edistrict.uk.gov.in",
+        "description": "Apply for income certificate online.",
+        "services": ["income certificate", "income proof", "salary certificate"]
+      },
+      "driving_license": {
+        "name": "Uttarakhand Transport - Parivahan Sewa",
+        "url": "https://parivahan.gov.in",
+        "description": "Driving license and vehicle registration services.",
+        "services": ["driving license", "dl renewal", "learner license", "vehicle registration"]
+      },
+      "land_records": {
+        "name": "Uttarakhand Bhulekh",
+        "url": "https://bhulekh.uk.gov.in",
+        "description": "Access land records and property details online.",
+        "services": ["land records", "property records", "mutation", "property verification"]
+      },
+      "birth_certificate": {
+        "name": "Uttarakhand Birth Certificate",
+        "url": "https://edistrict.uk.gov.in",
+        "description": "Apply and download birth certificates.",
+        "services": ["birth certificate", "birth registration", "birth record"]
+      },
+      "death_certificate": {
+        "name": "Uttarakhand Death Certificate",
+        "url": "https://edistrict.uk.gov.in",
+        "description": "Apply and download death certificates.",
+        "services": ["death certificate", "death registration", "death record"]
+      },
+      "marriage_certificate": {
+        "name": "Uttarakhand Marriage Registration",
+        "url": "https://edistrict.uk.gov.in",
+        "description": "Register and obtain marriage certificates.",
+        "services": ["marriage certificate", "marriage registration", "marriage record"]
+      },
+      "pension_services": {
+        "name": "Uttarakhand Pension Portal",
+        "url": "https://socialwelfare.uk.gov.in",
+        "description": "Apply for social security pensions online.",
+        "services": ["old age pension", "widow pension", "disability pension", "social security pension"]
+      },
+      "scholarships": {
+        "name": "Uttarakhand Scholarship Portal",
+        "url": "https://escholarship.uk.gov.in",
+        "description": "Apply for scholarships online.",
+        "services": ["scholarship", "student aid", "education grant", "merit scholarship"]
+      },
+      "employment_services": {
+        "name": "Uttarakhand Employment Exchange",
+        "url": "https://rojgar.uk.gov.in",
+        "description": "Register for jobs and employment services.",
+        "services": ["job search", "employment exchange", "job registration", "skill development"]
+      },
+      "property_registration": {
+        "name": "Uttarakhand Property Registration",
+        "url": "https://igr.uk.gov.in",
+        "description": "Register properties and verify deeds online.",
+        "services": ["property registration", "property deed", "stamp duty", "registration fee"]
+      },
+      "electricity_services": {
+        "name": "Uttarakhand Power Corporation Ltd",
+        "url": "https://www.upcl.org",
+        "description": "Pay electricity bills and apply for services online.",
+        "services": ["electricity bill", "power connection", "meter reading", "power complaint"]
+      },
+      "water_services": {
+        "name": "Uttarakhand Jal Sansthan",
+        "url": "http://www.ujs.uk.gov.in",
+        "description": "Water supply and consumer services.",
+        "services": ["water bill", "water connection", "water complaint", "water supply"]
+      },
+      "health_schemes": {
+        "name": "Uttarakhand Health Services",
+        "url": "https://health.uk.gov.in",
+        "description": "Government health schemes and services.",
+        "services": ["health card", "medical scheme", "hospital services", "health insurance"]
+      }
+    },
+    "punjab": {
+      "ration_card": {
+        "name": "Punjab eDistrict Portal",
+        "url": "https://eservices.punjab.gov.in",
+        "description": "Apply for ration card and other government services.",
+        "services": ["punjab ration card", "ration card application", "food security"]
+      },
+      "caste_certificate": {
+        "name": "Punjab Caste Certificate",
+        "url": "https://eservices.punjab.gov.in",
+        "description": "Apply online for caste certificate.",
+        "services": ["caste certificate", "sc certificate", "st certificate", "obc certificate"]
+      },
+      "income_certificate": {
+        "name": "Punjab Income Certificate",
+        "url": "https://eservices.punjab.gov.in",
+        "description": "Apply for income certificate online.",
+        "services": ["income certificate", "income proof", "salary certificate"]
+      },
+      "driving_license": {
+        "name": "Punjab Transport - Sarathi",
+        "url": "https://parivahan.gov.in",
+        "description": "Driving license and vehicle registration services.",
+        "services": ["driving license", "dl renewal", "learner license", "vehicle registration"]
+      },
+      "land_records": {
+        "name": "Punjab Land Records (Jamabandi)",
+        "url": "https://jamabandi.punjab.gov.in",
+        "description": "Access land records and property information.",
+        "services": ["land records", "jamabandi", "property records", "mutation"]
+      },
+      "birth_certificate": {
+        "name": "Punjab Birth Certificate",
+        "url": "https://eservices.punjab.gov.in",
+        "description": "Apply and download birth certificate.",
+        "services": ["birth certificate", "birth registration", "birth record"]
+      },
+      "death_certificate": {
+        "name": "Punjab Death Certificate",
+        "url": "https://eservices.punjab.gov.in",
+        "description": "Apply and download death certificate.",
+        "services": ["death certificate", "death registration", "death record"]
+      },
+      "marriage_certificate": {
+        "name": "Punjab Marriage Registration",
+        "url": "https://eservices.punjab.gov.in",
+        "description": "Marriage registration services.",
+        "services": ["marriage certificate", "marriage registration", "marriage record"]
+      },
+      "pension_services": {
+        "name": "Punjab Pension Portal",
+        "url": "https://punjab.gov.in",
+        "description": "Social security pension applications.",
+        "services": ["old age pension", "widow pension", "disability pension", "social security pension"]
+      },
+      "scholarships": {
+        "name": "Punjab Scholarship Portal",
+        "url": "https://scholarships.punjab.gov.in",
+        "description": "Apply for state scholarships online.",
+        "services": ["scholarship", "student aid", "education grant", "merit scholarship"]
+      },
+      "employment_services": {
+        "name": "Punjab Employment Exchange",
+        "url": "https://www.pbemployment.gov.in",
+        "description": "Employment exchange and job portal.",
+        "services": ["job search", "employment exchange", "job registration", "skill development"]
+      },
+      "property_registration": {
+        "name": "Punjab Property Registration",
+        "url": "https://igrpunjab.gov.in",
+        "description": "Property registration services in Punjab.",
+        "services": ["property registration", "property deed", "stamp duty", "registration fee"]
+      },
+      "electricity_services": {
+        "name": "Punjab State Power Corporation Ltd",
+        "url": "https://www.pspcl.in",
+        "description": "Electricity bill payment and services.",
+        "services": ["electricity bill", "power connection", "meter reading", "power complaint"]
+      },
+      "water_services": {
+        "name": "Punjab Water Supply & Sanitation",
+        "url": "https://pbdwss.gov.in",
+        "description": "Water services and online bill payment.",
+        "services": ["water bill", "water connection", "water complaint", "water supply"]
+      },
+      "health_schemes": {
+        "name": "Punjab Health Department",
+        "url": "https://punjab.gov.in",
+        "description": "Health schemes and medical services in Punjab.",
+        "services": ["health card", "medical scheme", "hospital services", "health insurance"]
+      }
+    },
+    "haryana": {
+      "ration_card": {
+        "name": "Haryana Antyodaya Saral",
+        "url": "https://saralharyana.gov.in",
+        "description": "Single-window citizen services including ration card.",
+        "services": ["haryana ration card", "ration card application", "food security"]
+      },
+      "caste_certificate": {
+        "name": "Haryana Caste Certificate",
+        "url": "https://saralharyana.gov.in",
+        "description": "Apply for caste certificate online.",
+        "services": ["caste certificate", "sc certificate", "st certificate", "obc certificate"]
+      },
+      "income_certificate": {
+        "name": "Haryana Income Certificate",
+        "url": "https://saralharyana.gov.in",
+        "description": "Apply for income certificate in Haryana.",
+        "services": ["income certificate", "income proof", "salary certificate"]
+      },
+      "driving_license": {
+        "name": "Haryana Transport - Sarathi",
+        "url": "https://parivahan.gov.in",
+        "description": "Driving license and vehicle services.",
+        "services": ["driving license", "dl renewal", "learner license", "vehicle registration"]
+      },
+      "land_records": {
+        "name": "Haryana Land Records (Jamabandi)",
+        "url": "https://jamabandi.nic.in",
+        "description": "View land records and property details.",
+        "services": ["land records", "jamabandi", "property records", "mutation"]
+      },
+      "birth_certificate": {
+        "name": "Haryana Birth Certificate",
+        "url": "https://saralharyana.gov.in",
+        "description": "Apply for birth certificate online.",
+        "services": ["birth certificate", "birth registration", "birth record"]
+      },
+      "death_certificate": {
+        "name": "Haryana Death Certificate",
+        "url": "https://saralharyana.gov.in",
+        "description": "Apply for death certificate online.",
+        "services": ["death certificate", "death registration", "death record"]
+      },
+      "marriage_certificate": {
+        "name": "Haryana Marriage Registration",
+        "url": "https://saralharyana.gov.in",
+        "description": "Register marriages and obtain certificates.",
+        "services": ["marriage certificate", "marriage registration", "marriage record"]
+      },
+      "pension_services": {
+        "name": "Haryana Pension Portal",
+        "url": "https://socialjusticehry.gov.in",
+        "description": "Apply for social welfare pensions.",
+        "services": ["old age pension", "widow pension", "disability pension", "social security pension"]
+      },
+      "scholarships": {
+        "name": "Haryana Scholarship Portal",
+        "url": "https://harchhatravratti.highereduhry.ac.in",
+        "description": "Scholarship application for Haryana students.",
+        "services": ["scholarship", "student aid", "education grant", "merit scholarship"]
+      },
+      "employment_services": {
+        "name": "Haryana Employment Exchange",
+        "url": "https://hrex.gov.in",
+        "description": "Online registration for jobs in Haryana.",
+        "services": ["job search", "employment exchange", "job registration", "skill development"]
+      },
+      "property_registration": {
+        "name": "Haryana Property Registration",
+        "url": "https://jamabandi.nic.in",
+        "description": "Online property registration and verification.",
+        "services": ["property registration", "property deed", "stamp duty", "registration fee"]
+      },
+      "electricity_services": {
+        "name": "UHBVN & DHBVN",
+        "url": "https://www.uhbvn.org.in",
+        "description": "Electricity bill payment and services for Haryana.",
+        "services": ["electricity bill", "power connection", "meter reading", "power complaint"]
+      },
+      "water_services": {
+        "name": "Haryana Urban Local Bodies",
+        "url": "https://ulbharyana.gov.in",
+        "description": "Water and sanitation services in Haryana.",
+        "services": ["water bill", "water connection", "water complaint", "water supply"]
+      },
+      "health_schemes": {
+        "name": "Haryana Health Department",
+        "url": "https://haryanahealth.nic.in",
+        "description": "Government health schemes and services.",
+        "services": ["health card", "medical scheme", "hospital services", "health insurance"]
+      }
+    }
+  },
+  "specialized_categories": {
+    "education_scholarships": {
+      "delhi": {
+        "scholarships": {
+          "name": "Delhi Scholarship Portal",
+          "url": "https://scholarship.delhi.gov.in",
+          "description": "Provides access to various state government scholarships and education-related schemes in Delhi."
+        }
+      },
+      "maharashtra": {
+        "scholarships": {
+          "name": "Maharashtra DBT Scholarship Portal",
+          "url": "https://mahadbtmahait.gov.in",
+          "description": "Direct Benefit Transfer portal for Maharashtra scholarships, including post-matric and merit-based schemes."
+        }
+      },
+      "karnataka": {
+        "scholarships": {
+          "name": "Karnataka Scholarship Portal (SSP)",
+          "url": "https://ssp.karnataka.gov.in",
+          "description": "State Scholarship Portal for Karnataka providing scholarships for students of all categories."
+        }
+      },
+      "tamil_nadu": {
+        "scholarships": {
+          "name": "Tamil Nadu Scholarship Portal",
+          "url": "https://www.tn.gov.in/scheme",
+          "description": "Official portal for Tamil Nadu scholarships and education support schemes."
+        }
+      },
+      "uttar_pradesh": {
+        "scholarships": {
+          "name": "UP Scholarship Portal",
+          "url": "https://scholarship.up.gov.in",
+          "description": "Official portal for scholarships provided by the Uttar Pradesh government for students."
+        }
+      },
+      "gujarat": {
+        "scholarships": {
+          "name": "Digital Gujarat Scholarship Portal",
+          "url": "https://www.digitalgujarat.gov.in",
+          "description": "Official portal for Gujarat government scholarships including post-matric, pre-matric, and merit-based schemes."
+        }
+      }
+    },
+    "health_insurance": {
+      "delhi": {
+        "health_services": {
+          "name": "Delhi Health Mission Portal",
+          "url": "https://delhi.gov.in/health",
+          "description": "Access to government hospitals, health schemes, and wellness services in Delhi."
+        },
+        "insurance": {
+          "name": "Delhi Aarogya Kosh",
+          "url": "https://delhigovt.nic.in/aarogyakosh",
+          "description": "Provides financial assistance for medical treatment to residents of Delhi."
+        }
+      },
+      "maharashtra": {
+        "health_services": {
+          "name": "Maha Arogya Portal",
+          "url": "https://arogya.maharashtra.gov.in",
+          "description": "Official portal for Maharashtra health services including hospitals, health programs, and wellness schemes."
+        },
+        "insurance": {
+          "name": "Mahatma Jyotiba Phule Jan Arogya Yojana",
+          "url": "https://www.jeevandayee.gov.in",
+          "description": "Government health insurance scheme providing coverage for low-income families in Maharashtra."
+        }
+      },
+      "karnataka": {
+        "health_services": {
+          "name": "Karnataka Health Portal",
+          "url": "https://arogya.karnataka.gov.in",
+          "description": "Portal for Karnataka government health services, hospitals, and wellness programs."
+        },
+        "insurance": {
+          "name": "Yeshasvini Cooperative Farmers Health Care Scheme",
+          "url": "https://yeshasvini.karnataka.gov.in",
+          "description": "Health insurance scheme for farmers and cooperative members in Karnataka."
+        }
+      },
+      "tamil_nadu": {
+        "health_services": {
+          "name": "Tamil Nadu Health Portal",
+          "url": "https://tnhealth.tn.gov.in",
+          "description": "Official portal for Tamil Nadu health department services, hospitals, and schemes."
+        },
+        "insurance": {
+          "name": "Chief Minister's Comprehensive Health Insurance Scheme (CMCHIS)",
+          "url": "https://www.cmchistn.com",
+          "description": "State-sponsored health insurance scheme for families in Tamil Nadu."
+        }
+      },
+      "uttar_pradesh": {
+        "health_services": {
+          "name": "UP Health Portal",
+          "url": "https://uphealth.up.gov.in",
+          "description": "Access to government health services, hospitals, and programs in Uttar Pradesh."
+        },
+        "insurance": {
+          "name": "Mukhya Mantri Jan Arogya Abhiyan",
+          "url": "https://ayushmanup.in",
+          "description": "Health insurance scheme under Ayushman Bharat implemented in Uttar Pradesh."
+        }
+      },
+      "gujarat": {
+        "health_services": {
+          "name": "Gujarat Health Department Portal",
+          "url": "https://gujhealth.gujarat.gov.in",
+          "description": "Access to health department services, hospitals, and health-related programs in Gujarat."
+        },
+        "insurance": {
+          "name": "Mukhyamantri Amrutam (MA) & MA Vatsalya Yojana",
+          "url": "https://magujarat.com",
+          "description": "Flagship health insurance scheme for families below poverty line and lower-income groups in Gujarat."
+        }
+      }
+    },
+    "employment_skill_development": {
+      "delhi": {
+        "employment": {
+          "name": "Delhi Employment Exchange",
+          "url": "https://degs.delhi.gov.in",
+          "description": "Portal for employment registration and job opportunities in Delhi."
+        },
+        "skill_development": {
+          "name": "Delhi Skill Development Mission",
+          "url": "https://dsswelfare.delhi.gov.in",
+          "description": "Skill training and development programs for youth in Delhi."
+        }
+      },
+      "maharashtra": {
+        "employment": {
+          "name": "Maharashtra Employment Portal",
+          "url": "https://rojgar.mahaswayam.gov.in",
+          "description": "Employment exchange and job registration services in Maharashtra."
+        },
+        "skill_development": {
+          "name": "Maharashtra Skill Development Society",
+          "url": "https://msds.maharashtra.gov.in",
+          "description": "Government initiatives for skill development and vocational training."
+        }
+      },
+      "karnataka": {
+        "employment": {
+          "name": "Karnataka Employment Portal",
+          "url": "https://employment.karnataka.gov.in",
+          "description": "Online employment exchange and career guidance services."
+        },
+        "skill_development": {
+          "name": "Skill Development, Entrepreneurship & Livelihood (SDEL) Department",
+          "url": "https://skillconnect.kaushalkar.com",
+          "description": "Official portal for skill training and entrepreneurship support in Karnataka."
+        }
+      },
+      "tamil_nadu": {
+        "employment": {
+          "name": "Tamil Nadu Employment Exchange",
+          "url": "https://tnvelaivaaippu.gov.in",
+          "description": "Job registration and employment services portal of Tamil Nadu."
+        },
+        "skill_development": {
+          "name": "Tamil Nadu Skill Development Corporation (TNSDC)",
+          "url": "https://www.tnskill.tn.gov.in",
+          "description": "Skill training and placement programs for youth in Tamil Nadu."
+        }
+      },
+      "uttar_pradesh": {
+        "employment": {
+          "name": "UP Sewayojan Portal",
+          "url": "https://sewayojan.up.nic.in",
+          "description": "Employment registration and job fair portal of Uttar Pradesh."
+        },
+        "skill_development": {
+          "name": "UP Skill Development Mission",
+          "url": "https://upsdm.gov.in",
+          "description": "Skill development programs and training centers across Uttar Pradesh."
+        }
+      },
+      "west_bengal": {
+        "employment": {
+          "name": "West Bengal Employment Bank",
+          "url": "https://employmentbankwb.gov.in",
+          "description": "Employment registration and job opportunities portal for West Bengal."
+        },
+        "skill_development": {
+          "name": "Utkarsh Bangla - West Bengal Skill Development Mission",
+          "url": "https://utkarshbangla.wb.gov.in",
+          "description": "Flagship skill development program of West Bengal government."
+        }
+      }
+    }
+  }
+}
+
+    

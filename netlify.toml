@@ -1,0 +1,37 @@
+# Netlify configuration for Portal Finder frontend
+[build]
+  # Build command (if needed)
+  command = "echo 'No build required for static frontend'"
+  
+  # Directory to deploy (frontend folder only)
+  publish = "frontend"
+
+# Redirect all API calls to the backend server
+[[redirects]]
+  from = "/api/*"
+  to = "https://your-backend-app.onrender.com/api/:splat"
+  status = 200
+  force = true
+
+# SPA fallback for client-side routing (if needed later)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+# Headers for API responses
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"

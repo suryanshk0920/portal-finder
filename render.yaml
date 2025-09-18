@@ -1,0 +1,25 @@
+# Render configuration for Portal Finder backend + admin
+services:
+  - type: web
+    name: portal-finder-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+    # Only expose specific routes publicly
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: /api/*
+      - type: rewrite
+        source: /admin/*
+        destination: /admin/*
+        # Admin routes will be accessible but not linked from main site
+    
+    # Health check endpoint
+    healthCheckPath: /api/states
