@@ -18,27 +18,18 @@ if (isNetlifyDeployment) {
   BACKEND_URL = window.location.origin;
 }
 
-// Only set API_CONFIG if we need separate backend
-if (isNetlifyDeployment && BACKEND_URL !== window.location.origin) {
-  window.API_CONFIG = {
-    // Main API endpoints
-    STATES_API: `${BACKEND_URL}/api/states`,
-    SEARCH_API: `${BACKEND_URL}/api/search`,
-    
-    // Admin endpoints (private)
-    ADMIN_DASHBOARD: `${BACKEND_URL}/admin`,
-    CACHE_API: `${BACKEND_URL}/api/cache`,
-    
-    // Google Sheets integration
-    GOOGLE_SCRIPT_URL: window.GOOGLE_SCRIPT_URL || 'REPLACE_WITH_YOUR_GOOGLE_SCRIPT_URL'
-  };
-  
+// For Netlify deployment, use proxy URLs (no CORS issues)
+if (isNetlifyDeployment) {
+  // Use Netlify's proxy - no API_CONFIG needed, use relative URLs
   window.IS_PRODUCTION = true;
-  console.log('[CONFIG] Separate deployment mode - Backend:', BACKEND_URL);
-} else {
+  console.log('[CONFIG] Netlify deployment - Using proxy for API calls');
+} else if (isRenderDeployment || isLocalhost) {
   // Same-domain deployment - use relative URLs
   console.log('[CONFIG] Same-domain deployment mode - Origin:', window.location.origin);
   window.IS_PRODUCTION = !isLocalhost;
+} else {
+  // Fallback for other deployments
+  window.IS_PRODUCTION = true;
 }
 
 console.log('[CONFIG] Environment:', window.IS_PRODUCTION ? 'Production' : 'Development');
