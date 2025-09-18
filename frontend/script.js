@@ -15,14 +15,20 @@ let isSearching = false;
 
 // Get API URL based on environment
 function getApiUrl(endpoint) {
-  if (window.API_CONFIG && window.IS_PRODUCTION) {
+  // Check if we're on Render (or any production environment)
+  const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  
+  if (!isLocalhost && window.API_CONFIG && window.API_CONFIG.STATES_API) {
+    // Using separate frontend/backend deployments
     switch(endpoint) {
       case 'states': return window.API_CONFIG.STATES_API;
       case 'search': return window.API_CONFIG.SEARCH_API;
-      default: return `/api/${endpoint}`;
+      default: return `${window.API_CONFIG.STATES_API.replace('/api/states', '')}/api/${endpoint}`;
     }
   }
-  return `/api/${endpoint}`; // Default for development
+  
+  // Default: same-origin requests (localhost or same-domain deployment)
+  return `/api/${endpoint}`;
 }
 
 // Load states and cities
