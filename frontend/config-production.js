@@ -9,7 +9,7 @@ const isLocalhost = window.location.hostname === 'localhost' || window.location.
 let BACKEND_URL;
 if (isNetlifyDeployment) {
   // For separate Netlify frontend deployment
-  BACKEND_URL = 'https://your-backend-app.onrender.com'; // Replace with actual URL
+  BACKEND_URL = 'https://portal-finder.onrender.com'; // Replace with your actual Render URL
 } else if (isRenderDeployment || isLocalhost) {
   // For same-domain deployment (Render full-stack or localhost)
   BACKEND_URL = window.location.origin;

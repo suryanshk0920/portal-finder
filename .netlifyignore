@@ -1,0 +1,24 @@
+# Exclude backend and admin files from Netlify deployment
+backend/
+admin/
+node_modules/
+*.db
+*.sqlite
+*.log
+
+# Exclude configuration files not needed for frontend
+render.yaml
+google-apps-script.js
+ADMIN_*.md
+DEPLOYMENT_GUIDE.md
+
+# Exclude development files
+test-contact-form.html
+.env
+.env.*
+
+# Exclude Git and IDE files
+.git/
+.gitignore
+.vscode/
+.idea/
