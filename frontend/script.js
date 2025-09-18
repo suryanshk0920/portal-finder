@@ -629,9 +629,72 @@ let currentOfficeData = {};
 // Geocoding service using Nominatim (free OpenStreetMap service)
 async function geocodeAddress(address) {
   try {
-    const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}&limit=1&countrycodes=in`);
-    const data = await response.json();
+    console.log('[INFO] Geocoding address:', address);
     
+    // Clean and enhance the address for better geocoding
+    let cleanAddress = address;
+    if (!address.toLowerCase().includes('india')) {
+      cleanAddress += ', India';
+    }
+    
+    const response = await fetch(
+      `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(cleanAddress)}&limit=3&countrycodes=in&addressdetails=1`,
+      {
+        headers: {
+          'User-Agent': 'Portal-Finder-Map'
+        }
+      }
+    );
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    
+    const data = await response.json();
+    console.log('[INFO] Geocoding results:', data);
+    
+    if (data && data.length > 0) {
+      // Pick the best result (usually the first one)
+      const result = data[0];
+      return {
+        lat: parseFloat(result.lat),
+        lng: parseFloat(result.lon),
+        display_name: result.display_name
+      };
+    }
+    
+    console.warn('[WARNING] No geocoding results for:', cleanAddress);
+    return null;
+  } catch (error) {
+    console.error('[ERROR] Geocoding failed:', error);
+    
+    // Try a fallback with just the city/state if the full address fails
+    if (address.includes(',')) {
+      const parts = address.split(',');
+      if (parts.length >= 2) {
+        const cityState = parts.slice(-2).join(',').trim();
+        console.log('[INFO] Trying fallback geocoding with:', cityState);
+        return await geocodeAddressFallback(cityState);
+      }
+    }
+    
+    return null;
+  }
+}
+
+// Fallback geocoding for city/state only
+async function geocodeAddressFallback(cityState) {
+  try {
+    const response = await fetch(
+      `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(cityState + ', India')}&limit=1&countrycodes=in`,
+      {
+        headers: {
+          'User-Agent': 'Portal-Finder-Map'
+        }
+      }
+    );
+    
+    const data = await response.json();
     if (data && data.length > 0) {
       return {
         lat: parseFloat(data[0].lat),
@@ -641,7 +704,7 @@ async function geocodeAddress(address) {
     }
     return null;
   } catch (error) {
-    console.error('[ERROR] Geocoding failed:', error);
+    console.error('[ERROR] Fallback geocoding failed:', error);
     return null;
   }
 }
@@ -725,7 +788,37 @@ async function initializeMap(officeLocation) {
     const officeCoords = await geocodeAddress(officeLocation);
     
     if (!officeCoords) {
-      showNotification('Could not find the office location on the map', 'error');
+      console.error('[ERROR] Could not geocode office location:', officeLocation);
+      showNotification(`Could not find "${officeLocation}" on the map. The address might be too general or unavailable.`, 'error');
+      
+      // Show map anyway with a default location
+      const defaultCoords = { lat: 28.6139, lng: 77.2090 }; // New Delhi as fallback
+      
+      currentMap = L.map('map').setView([defaultCoords.lat, defaultCoords.lng], 10);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 18
+      }).addTo(currentMap);
+      
+      // Add a generic marker
+      const genericIcon = L.divIcon({
+        className: 'custom-marker',
+        html: '<i class="fas fa-map-marker-alt" style="color: white; transform: rotate(45deg); margin-top: 6px; margin-left: 8px;"></i>',
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
+      });
+      
+      L.marker([defaultCoords.lat, defaultCoords.lng], { icon: genericIcon })
+        .addTo(currentMap)
+        .bindPopup(`
+          <div style="font-size: 14px; line-height: 1.4;">
+            <strong>Location Not Found</strong><br>
+            <i class="fas fa-exclamation-triangle" style="color: #f56565;"></i> ${officeLocation}<br>
+            <small>Please contact the office directly for exact location</small>
+          </div>
+        `);
+      
+      showMapLoading(false);
       return;
     }
     
